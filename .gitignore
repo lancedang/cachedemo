@@ -1,0 +1,48 @@
+# maven ignore
+target/
+*.jar
+*.war
+*.zip
+*.tar
+*.tar.gz
+
+# eclipse ignore
+.settings/
+.project
+.classpath
+
+# idea ignore
+.idea/
+*.ipr
+*.iml
+*.iws
+
+# temp ignore
+logs/
+*.docpom.xml
+*.log
+*.cache
+*.diff
+*.patch
+*.tmp
+
+# system ignore
+.DS_Store
+Thumbs.db
+
+*.class
+
+.mvn
+
+# front project
+hackweek-front/dist/
+hackweek-front/node_modules/
+hackweek-front/.idea
+hackweek-front/*.iws
+hackweek-front/*.iml
+hackweek-front/*.ipr
+
+# backend
+mvnw
+HELP.md
+mvnw.cmd

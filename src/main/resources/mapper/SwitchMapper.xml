@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lance.cache.cachedemo.common.mapper.SwitchMappingMapper">
+    <insert id="insert">
+        insert into SWITCH_MAPPING (NAME , DESC , STATUS) values(
+          #{switch.name},
+          #{switch.desc},
+          #{switch.status}
+        )
+    </insert>
+
+    <select id="findAllOpenSwitch" resultMap="switch">
+        SELECT * from switch_mapping where STATUS='T'
+    </select>
+
+
+    <resultMap id="switch" type="com.lance.cache.cachedemo.model.SwitchMappingEntity" >
+        <result column="NAME" property="name"/>
+        <result column="DESC" property="desc"/>
+        <result column="STATUS" property="status"/>
+    </resultMap>
+</mapper>
