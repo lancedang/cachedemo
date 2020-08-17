@@ -13,7 +13,7 @@ import java.util.Objects;
 
 @SpringBootApplication
 @MapperScan(basePackages = "com.lance.cache.cachedemo.common.mapper")
-@EnableScheduling
+//@EnableScheduling
 public class CacheDemoApplication implements ApplicationContextAware {
 
     private static ApplicationContext applicationContext;

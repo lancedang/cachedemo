@@ -47,7 +47,7 @@ public class LogSwitchCacheImpl implements CacheRefreshInterface, CacheInitializ
     }
 
     private void fullFillLocalMap() throws InterruptedException {
-        //Thread.sleep(5000);
+        Thread.sleep(5000);
         List<SwitchMappingEntity> allOpenSwitch = switchMappingRepository.findAllOpenSwitch();
         //初始化的时候插入DB中原始数据
         allOpenSwitch.stream().filter(item -> item.getName().equals("log")).forEach(item -> logMap.put(item.getName(), item));
