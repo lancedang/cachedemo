@@ -1,5 +1,5 @@
 package com.lance.cache.cachedemo.core;
 
 public interface CacheRefreshInterface {
-    void refresh();
+    void refresh() throws InterruptedException;
 }
