@@ -1,8 +1,10 @@
 package com.lance.cache.cachedemo;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.lance.cache.cachedemo.factory.ResponseHandlerFactory;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.BeansException;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -16,12 +18,15 @@ import java.util.Objects;
 //@EnableScheduling
 public class CacheDemoApplication implements ApplicationContextAware {
 
+    @Autowired
+    private ResponseHandlerFactory responseHandlerFactory;
+
     private static ApplicationContext applicationContext;
 
     public static void main(String[] args) {
         SpringApplication.run(CacheDemoApplication.class, args);
-        ObjectMapper bean = applicationContext.getBean(ObjectMapper.class);
-        Objects.nonNull(bean);
+        //ObjectMapper bean = applicationContext.getBean(ObjectMapper.class);
+        //Objects.nonNull(bean);
     }
 
     @Override
